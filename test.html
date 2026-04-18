@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Тест библиотеки</title>
+</head>
+<body>
+<h1>Результат работы библиотеки:</h1>
+<div id="output"></div>
+<!-- Подключаем наш собранный артефакт -->
+<script src="./dist/bundle.js"></script>
+<script>
+// Используем глобальную переменную MyAwesomeLib
+const result1 = MyAwesomeLib.reverseAndCapitalize('привет мир');
+const result2 = MyAwesomeLib.uniqueElements([1, 2, 2, 3, 3, 4]);
+document.getElementById('output').innerHTML = `
+<p>reverseAndCapitalize('привет мир'): <strong>${result1}</strong></p>
+<p>uniqueElements([1,2,2,3,3,4]): <strong>[${result2}]</strong></p>
+`;</script>
+</body>
+</html>
+
